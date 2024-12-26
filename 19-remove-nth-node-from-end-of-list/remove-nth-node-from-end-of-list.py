@@ -16,9 +16,12 @@ class Solution(object):
             fast = fast.next
         if not fast:
             return head.next
+
         while fast.next is not None:
             slow = slow.next
             fast = fast.next
-        
+            
         slow.next = slow.next.next
+
         return head
+

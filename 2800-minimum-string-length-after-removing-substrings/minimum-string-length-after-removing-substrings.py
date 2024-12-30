@@ -1,13 +1,52 @@
-class Solution:
-    def minLength(self, s: str) -> int:
+class Solution(object):
+    def minLength(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
         stack = []
-        for i in s:
+        for val in s:
             if stack:
-                if stack[-1] == "A" and i == 'B':
+                if stack[-1] == 'A' and val == 'B':
                     stack.pop()
                     continue
-                elif stack[-1] == "C" and i == "D":
+                if stack[-1] == 'C' and val == 'D':
                     stack.pop()
                     continue
-            stack.append(i)
+            stack.append(val)
+
         return len(stack)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # stack = []
+        # for i in s:
+        #     if stack:
+        #         if stack[-1] == "A" and i == 'B':
+        #             stack.pop()
+        #             continue
+        #         elif stack[-1] == "C" and i == "D":
+        #             stack.pop()
+        #             continue
+        #     stack.append(i)
+        # return len(stack)

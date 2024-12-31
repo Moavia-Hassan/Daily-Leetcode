@@ -5,17 +5,17 @@ class Solution(object):
         :rtype: int
         """
         stack = []
-        for val in s:
+        for i in s:
             if stack:
-                if stack[-1] == 'A' and val == 'B':
+                if stack[-1] == "A" and i == 'B':
                     stack.pop()
                     continue
-                if stack[-1] == 'C' and val == 'D':
+                elif stack[-1] == "C" and i == "D":
                     stack.pop()
                     continue
-            stack.append(val)
-
+            stack.append(i)
         return len(stack)
+        
 
 
 
@@ -38,15 +38,4 @@ class Solution(object):
 
 
 
-
-        # stack = []
-        # for i in s:
-        #     if stack:
-        #         if stack[-1] == "A" and i == 'B':
-        #             stack.pop()
-        #             continue
-        #         elif stack[-1] == "C" and i == "D":
-        #             stack.pop()
-        #             continue
-        #     stack.append(i)
-        # return len(stack)
+        

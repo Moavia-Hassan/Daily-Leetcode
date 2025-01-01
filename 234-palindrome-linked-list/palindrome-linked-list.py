@@ -16,28 +16,3 @@ class Solution(object):
             curr = curr.next
         
         return list1 == list1[::-1]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # curr = head
-        # list1 = []
-        # while curr != None:
-        #     list1.append(curr.val)
-        #     curr = curr.next
-        # return list1 == list1[::-1]

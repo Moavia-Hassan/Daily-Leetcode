@@ -1,9 +1,7 @@
-from collections import deque
-
 class MyStack:
 
     def __init__(self):
-        self._queue = deque()
+        self._queue = collections.deque()
 
     def push(self, x):
         self._queue.appendleft(x)

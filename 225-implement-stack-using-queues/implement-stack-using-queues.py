@@ -1,14 +1,13 @@
+from collections import deque
+
 class MyStack:
 
     def __init__(self):
-        self._queue = collections.deque()
+        self._queue = deque()
 
     def push(self, x):
-        q = self._queue
-        q.append(x)
-        for _ in range(len(q) - 1):
-            q.append(q.popleft())
-        
+        self._queue.appendleft(x)
+
     def pop(self):
         return self._queue.popleft()
 

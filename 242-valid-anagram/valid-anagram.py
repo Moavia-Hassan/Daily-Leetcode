@@ -1,12 +1,21 @@
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
-        for i in s:
-            if i in t:
-                t = t.replace(i,"",1)
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        count = defaultdict(int)
+
+        for char in s:
+            count[char] += 1
+
+        for char in t:
+            count[char] -= 1
+
+        for val in count.values():
+            if val != 0:
+                return False
         
-        if len(t) == 0:
-            return True
-        else:
-            return False
+        return True
+        

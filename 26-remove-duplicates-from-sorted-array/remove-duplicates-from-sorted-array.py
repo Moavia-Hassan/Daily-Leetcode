@@ -4,15 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        slow, fast = 0,1
-
-        while fast < len(nums):
-            if nums[slow] == nums[fast]:
-                fast += 1
+        i = 0
+        while i < len(nums)-1:
+            if nums[i] == nums[i+1]:
+                nums.pop(i)
             else:
-                nums[slow+1] = nums[fast]
-                slow += 1
-                fast += 1
+                i += 1
 
-        return slow+1
-        
+        return len(nums)

@@ -41,7 +41,7 @@ Daily-LeetCode/
 3. **Contribute**: If you have a better solution or want to suggest improvements, feel free to open a pull request or issue.
 4. **Learn Together**: Use this repository as a resource to learn and grow alongside me!
 
-## 🤝 Contributing
+## 🤝 Contributions
 
 Contributions are welcome! If you have a better solution, want to add a new problem, or have suggestions for improving the repository, please feel free to:
 

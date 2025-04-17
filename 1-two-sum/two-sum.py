@@ -1,15 +1,9 @@
-class Solution(object):
+# Brute Force Approach (O(n²))
+class Solution:
     def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        output = []
+        # Try every pair of numbers
         for i in range(len(nums)):
-            for j in range(i,len(nums)):
-                if nums[i] + nums[j] == target and i != j:
-                    output.append(i)
-                    output.append(j)
-        print(output)
-        return output
+            for j in range(i + 1, len(nums)):
+                # Check if the pair sums to target
+                if nums[i] + nums[j] == target:
+                    return [i, j]

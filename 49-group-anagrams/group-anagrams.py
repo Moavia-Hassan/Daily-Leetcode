@@ -4,15 +4,12 @@ class Solution:
         res = defaultdict(list)
 
         for s in strs:
-            count = [0] * 26
-            print(f"initial count: {count}")
+            count = [0] * 26  # [0,0,0,0............]
+            
             for c in s:
-                count[ord(c) - ord("a")] += 1
+                count[ord(c) - ord("a")] += 1   
 
             res[tuple(count)].append(s)
-            print(f"here Tuple(count): {tuple(count)}")
 
-        print(f"\nRes Dictionary: {res}")
-        print (res.values)
-        
+
         return list(res.values())
